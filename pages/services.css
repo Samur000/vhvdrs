@@ -1,0 +1,391 @@
+/* Services Hero Section */
+.services-hero {
+	height: 50vh;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	padding-top: 80px;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(135deg, rgba(30, 144, 255, 0.1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.services-hero-content {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 2;
+}
+
+.services-hero h1 {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: var(--primary);
+}
+
+.services-hero p {
+	font-size: 18px;
+	margin-bottom: 30px;
+	color: var(--text);
+	opacity: 0.9;
+}
+
+.services-hero-shapes {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.3;
+}
+
+.services-hero-shapes .shape {
+	position: absolute;
+}
+
+.services-hero-shapes .shape-1 {
+	top: 10%;
+	left: 15%;
+	width: 300px;
+	height: 300px;
+	fill: var(--primary);
+	animation: float-y 8s ease-in-out infinite, rotate 40s linear infinite;
+}
+
+.services-hero-shapes .shape-2 {
+	top: 45%;
+	left: 35%;
+	width: 200px;
+	height: 200px;
+	fill: var(--accent);
+	animation: float-x 10s ease-in-out infinite, rotate 30s linear infinite reverse;
+}
+
+.services-hero-shapes .shape-3 {
+	top: 60%;
+	left: 15%;
+	width: 150px;
+	height: 150px;
+	fill: var(--primary);
+	animation: float-y 6s ease-in-out infinite, rotate 50s linear infinite;
+}
+
+/* Services Section */
+.services {
+	padding: 100px 0;
+	background-color: white;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 30px;
+}
+
+.service-card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 30px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.service-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background-color: var(--primary);
+	z-index: 2;
+}
+
+.service-card:nth-child(2)::before {
+	background-color: var(--primary);
+}
+
+.service-card:nth-child(3)::before {
+	background-color: var(--accent);
+}
+
+.service-card:nth-child(4)::before {
+	background-color: var(--primary);
+}
+
+.service-card:nth-child(5)::before {
+	background-color: var(--accent);
+}
+
+.service-card:nth-child(6)::before {
+	background-color: var(--primary);
+}
+
+.service-icon {
+	width: 60px;
+	height: 60px;
+	background: rgba(30, 144, 255, 0.1);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.service-icon svg {
+	width: 30px;
+	height: 30px;
+	fill: var(--primary);
+}
+
+.service-card h3 {
+	font-size: 22px;
+	margin-bottom: 15px;
+	color: var(--primary);
+}
+
+.service-features {
+	margin-bottom: 20px;
+	flex-grow: 1;
+}
+
+.service-features ul {
+	list-style: none;
+}
+
+.service-features li {
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 8px;
+	font-size: 15px;
+}
+
+.service-features li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px;
+	height: 8px;
+	background-color: var(--primary);
+	border-radius: 50%;
+}
+
+.service-card p {
+	margin-bottom: 20px;
+	color: var(--text);
+	opacity: 0.8;
+	line-height: 1.6;
+}
+
+.service-price {
+	margin-bottom: 20px;
+}
+
+.service-price span {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--primary);
+}
+
+.btn-service {
+	display: block;
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	text-align: center;
+	margin-top: auto;
+}
+
+/* Consultation Section */
+.consultation {
+	padding: 100px 0;
+	background: linear-gradient(135deg, rgba(30, 144, 255, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.consultation-container {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.consultation-content {
+	flex: 1;
+}
+
+.consultation-content h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: var(--primary);
+}
+
+.consultation-content p {
+	margin-bottom: 30px;
+	font-size: 16px;
+	color: var(--text);
+	opacity: 0.8;
+	line-height: 1.6;
+}
+
+.consultation-features {
+	margin-bottom: 30px;
+}
+
+.feature-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.feature-item svg {
+	width: 20px;
+	height: 20px;
+	fill: none;
+	stroke: var(--primary);
+	stroke-width: 2;
+	margin-right: 10px;
+}
+
+.feature-item span {
+	font-size: 16px;
+	color: var(--text);
+}
+
+.consultation-form {
+	flex: 1;
+	background: white;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.consultation-form .form-group {
+	margin-bottom: 20px;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+	width: 100%;
+	padding: 12px 15px;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus {
+	border-color: var(--primary);
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+}
+
+.consultation-form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.consultation-form select {
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231e90ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	background-size: 15px;
+}
+
+.btn-submit {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 30px;
+	color: var(--primary);
+	border-radius: 50px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s;
+	width: 100%;
+	border: 2px solid var(--primary);
+	background-color: transparent;
+}
+
+.btn-submit:hover {
+	background: var(--primary);
+	color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+	.consultation-container {
+		flex-direction: column;
+	}
+
+	.consultation-content {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.consultation-features {
+		justify-content: center;
+	}
+
+	.feature-item {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 768px) {
+	.services-hero h1 {
+		font-size: 36px;
+	}
+
+	.services-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.consultation-content h2 {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 576px) {
+	.services-hero {
+		height: auto;
+		padding: 120px 0 80px;
+	}
+
+	.services-hero h1 {
+		font-size: 28px;
+	}
+
+	.services-hero p {
+		font-size: 16px;
+	}
+
+	.services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.consultation-content h2 {
+		font-size: 24px;
+	}
+
+	.consultation-form {
+		padding: 30px 20px;
+	}
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Кейсы - Lekks IT</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="../pages/cases.css">
+	</head>
+
+	<body>
+		<!-- Header -->
+		<header id="header">
+			<div class="container header-container">
+				<a href="../index.html" class="logo">Lekks<span>IT</span></a>
+				<button class="mobile-menu-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav>
+					<ul>
+						<li><a href="../index.html">Главная</a></li>
+						<li><a href="./about.html">О нас</a></li>
+						<li><a href="./services.html">Услуги</a></li>
+						<li><a href="./cases.html" class="active">Кейсы</a></li>
+						<li><a href="./contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="cases-hero">
+			<div class="container">
+				<div class="cases-hero-content animate-on-scroll">
+					<h1>Наши <span class="highlight-word">кейсы</span></h1>
+					<p>Реализованные проекты, которые помогли нашим клиентам достичь бизнес-целей</p>
+				</div>
+			</div>
+			<div class="cases-hero-shapes">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
+			</div>
+		</section>
+
+		<!-- Cases Section -->
+		<section class="section cases">
+			<div class="container">
+				<div class="section-title animate-on-scroll">
+					<h2>Реализованные проекты</h2>
+					<p>Каждый проект - это уникальное решение под конкретные задачи бизнеса</p>
+				</div>
+
+				<div class="cases-filter animate-on-scroll">
+					<button class="filter-btn active" data-filter="all">Все</button>
+					<button class="filter-btn" data-filter="web">Веб-разработка</button>
+					<button class="filter-btn" data-filter="mobile">Мобильные приложения</button>
+					<button class="filter-btn" data-filter="design">UI/UX дизайн</button>
+				</div>
+
+				<div class="cases-grid">
+					<!-- Кейс 1 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="web">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Маркетплейс для ритейла">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=1" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">Веб-разработка</span>
+							<h3>Маркетплейс для ритейла</h3>
+							<p>Платформа для онлайн-продаж с интеграцией CRM и аналитикой</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>+120%</span>
+									<small>рост продаж</small>
+								</div>
+								<div class="stat">
+									<span>1.2с</span>
+									<small>скорость загрузки</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Кейс 2 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="mobile"
+						style="transition-delay: 0.1s">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Приложение для доставки">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=2" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">Мобильное приложение</span>
+							<h3>Приложение для доставки</h3>
+							<p>Кроссплатформенное решение с геолокацией и push-уведомлениями</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>50K+</span>
+									<small>установок</small>
+								</div>
+								<div class="stat">
+									<span>4.8</span>
+									<small>рейтинг</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Кейс 3 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="design"
+						style="transition-delay: 0.2s">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Корпоративный портал">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=3" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">UI/UX дизайн</span>
+							<h3>Корпоративный портал</h3>
+							<p>Система для автоматизации процессов крупной компании</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>-40%</span>
+									<small>время задач</small>
+								</div>
+								<div class="stat">
+									<span>75%</span>
+									<small>меньше бумаги</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Кейс 4 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="web" style="transition-delay: 0.3s">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Сайт для стартапа">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=4" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">Веб-разработка</span>
+							<h3>Сайт для стартапа</h3>
+							<p>Современный лендинг с анимациями и аналитикой поведения</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>+300%</span>
+									<small>лидов</small>
+								</div>
+								<div class="stat">
+									<span>2.5x</span>
+									<small>конверсия</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Кейс 5 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="mobile"
+						style="transition-delay: 0.4s">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Фитнес приложение">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=5" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">Мобильное приложение</span>
+							<h3>Фитнес приложение</h3>
+							<p>Персонализированные тренировки и трекинг прогресса</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>80%</span>
+									<small>удержание</small>
+								</div>
+								<div class="stat">
+									<span>4.9</span>
+									<small>рейтинг</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Кейс 6 -->
+					<!-- <div class="case-card animate-on-scroll" data-category="design"
+						style="transition-delay: 0.5s">
+						<div class="case-image">
+							<img
+								src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+								alt="Ребрендинг платформы">
+							<div class="case-overlay">
+								<a href="case-detail.html?id=6" class="case-link">
+									<svg viewBox="0 0 24 24">
+										<path d="M15 12l-7-7v4H3v6h5v4l7-7z" />
+										<path d="M22 12l-7-7v4h-5v6h5v4l7-7z" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="case-content">
+							<span class="case-category">UI/UX дизайн</span>
+							<h3>Ребрендинг платформы</h3>
+							<p>Обновление интерфейса и пользовательского опыта</p>
+							<div class="case-stats">
+								<div class="stat">
+									<span>+45%</span>
+									<small>вовлеченность</small>
+								</div>
+								<div class="stat">
+									<span>3x</span>
+									<small>скорость задач</small>
+								</div>
+							</div>
+						</div>
+					</div> -->
+				</div>
+
+				<div class="cases-more animate-on-scroll">
+					<a href="#" class="btn btn-load-more">Показать еще</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section cta">
+			<div class="container">
+				<div class="cta-content animate-on-scroll">
+					<h2>Хотите такой же результат?</h2>
+					<p>Оставьте заявку, и мы обсудим ваш проект</p>
+					<a href="../index.html#contact" class="btn">Обсудить проект</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="footer-container">
+					<div class="footer-about">
+						<a href="../index.html" class="footer-logo">Lekks<span>IT</span></a>
+						<p>Инновационные IT решения для вашего бизнеса. Мы создаем цифровые продукты, которые работают.</p>
+						<div class="social-links">
+							<a href="#" class="social-link">
+								<svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+								</svg>
+							</a>
+							<a href="#" class="social-link">
+								<svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+								</svg>
+							</a>
+							<a href="#" class="social-link">
+								<svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer-links">
+						<h4>Услуги</h4>
+						<ul>
+							<li><a href="./services.html">Веб-разработка</a></li>
+							<li><a href="./services.html">Мобильные приложения</a></li>
+							<li><a href="./services.html">UI/UX дизайн</a></li>
+							<li><a href="./services.html">Техническая поддержка</a></li>
+						</ul>
+					</div>
+					<div class="footer-links">
+						<h4>Компания</h4>
+						<ul>
+							<li><a href="./about.html">О нас</a></li>
+							<li><a href="./cases.html">Кейсы</a></li>
+							<li><a href="#">Команда</a></li>
+							<li><a href="#">Вакансии</a></li>
+						</ul>
+					</div>
+					<div class="footer-links">
+						<h4>Контакты</h4>
+						<ul>
+							<li><a href="./contacts.html">Связаться с нами</a></li>
+							<li><a href="./contacts.html">Офис в Москве</a></li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Условия использования</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2023 Lekks IT. Все права защищены.</p>
+				</div>
+			</div>
+		</footer>
+		<div class="menu-overlay"></div>
+
+		<!-- Scripts -->
+		<script src="../app.js"></script>
+		<script src="./cases-data.js"></script>
+		<script src="./cases.js"></script>
+	</body>
+
+</html>
