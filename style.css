@@ -14,7 +14,9 @@
 	box-sizing: border-box;
 	font-family: "Montserrat Alternates", sans-serif;
 }
-a, button{
+
+a,
+button {
 	cursor: pointer;
 }
 
@@ -26,15 +28,15 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 10px;
+	width: 7px;
 }
 
 body::-webkit-scrollbar-track {
-	background: var(--primary);
+	background: var(--light);
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--accent);
+	background-color: var(--primary);
 	border-radius: 20px;
 }
 
@@ -181,8 +183,8 @@ nav ul li a:hover {
 
 .hero-shapes {
 	position: absolute;
-	top: 0;
-	right: 70px;
+	top: 10%;
+	right: 0px;
 	width: 50%;
 	height: 100%;
 	z-index: 1;
@@ -190,7 +192,7 @@ nav ul li a:hover {
 
 .shape {
 	position: absolute;
-	opacity: 0.1;
+	/* opacity: 0.1; */
 }
 
 .shape-1 {
@@ -198,26 +200,92 @@ nav ul li a:hover {
 	right: 15%;
 	width: 300px;
 	height: 300px;
-	fill: var(--primary);
+	fill: var(--accent);
 	animation: float-y 8s ease-in-out infinite, rotate 40s linear infinite;
+	animation:
+		float-y 8s ease-in-out infinite,
+		rotate 40s linear infinite,
+		pulse-scale 5s ease-in-out infinite;
+	transform-origin: center;
+	opacity: .3;
 }
 
 .shape-2 {
-	top: 45%;
-	right: 35%;
+	top: 40%;
+	right: 30%;
 	width: 200px;
 	height: 200px;
-	fill: var(--accent);
+	fill: var(--primary);
 	animation: float-x 10s ease-in-out infinite, rotate 30s linear infinite reverse;
+	opacity: .7;
+	animation:
+		float-x 10s ease-in-out infinite,
+		rotate 60s linear infinite reverse,
+		scale-move 6s ease-in-out infinite;
+	transform-origin: center;
 }
 
 .shape-3 {
-	top: 60%;
+	top: 50%;
 	right: 15%;
 	width: 150px;
 	height: 150px;
-	fill: var(--primary);
+	fill: var(--text);
 	animation: float-y 6s ease-in-out infinite, rotate 50s linear infinite;
+	animation:
+		float-y 6s ease-in-out infinite,
+		rotate 50s linear infinite,
+		bounce-scale 10s ease-in-out infinite;
+	transform-origin: center;
+	opacity: .7;
+}
+
+@keyframes pulse-scale {
+
+	0%,
+	100% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.2);
+	}
+}
+
+@keyframes scale-move {
+
+	0%,
+	100% {
+		transform: scale(1) translateX(0);
+	}
+
+	25% {
+		transform: scale(0.9) translateX(-20px);
+	}
+
+	75% {
+		transform: scale(1.1) translateX(20px);
+	}
+}
+
+@keyframes bounce-scale {
+
+	0%,
+	100% {
+		transform: scale(1) translateY(0);
+	}
+
+	25% {
+		transform: scale(1.2) translateY(-30px);
+	}
+
+	50% {
+		transform: scale(0.9) translateY(10px);
+	}
+
+	75% {
+		transform: scale(1.1) translateY(-15px);
+	}
 }
 
 @keyframes float-x {
@@ -505,7 +573,8 @@ nav ul li a:hover {
 
 /* Contact Section */
 .contact {
-	background: linear-gradient(135deg, rgba(20, 164, 94, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+	/* background: linear-gradient(135deg, rgba(20, 164, 94, 0.05) 0%, rgba(255, 255, 255, 1) 100%); */
+	background: var(--light);
 }
 
 .contact-container {
@@ -559,7 +628,8 @@ nav ul li a:hover {
 .contact-icon-wrapper {
 	width: 50px;
 	height: 50px;
-	background: rgba(20, 164, 94, 0.1);
+	/* background: rgba(20, 164, 94, 0.1); */
+	background: var(--light);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -590,7 +660,7 @@ nav ul li a:hover {
 	width: 45px;
 	height: 45px;
 	border-radius: 50%;
-	background: rgba(20, 164, 94, 0.1);
+	background-color: var(--light);
 	transition: all 0.3s;
 }
 
@@ -671,79 +741,200 @@ nav ul li a:hover {
 	color: white;
 }
 
-/* Footer */
+/* Замените текущие стили футера на эти: */
 footer {
-	background-color: var(--primary);
-	color: white;
-	padding: 50px 0 20px;
+	background-color: var(--accent);
+	color: white !important;
+	padding: 20px 0 30px;
+	position: relative;
+	overflow: hidden;
 }
 
-.footer-container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 30px;
-	margin-bottom: 40px;
+footer::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.footer-brand {
+	max-width: 300px;
 }
 
 .footer-logo {
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: 700;
 	color: white;
-	margin-bottom: 20px;
+	text-decoration: none;
+	margin-bottom: 15px;
 	display: inline-block;
 }
 
 .footer-logo span {
+	color: var(--primary);
+}
+
+.footer-slogan {
+	opacity: 0.8;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+.social-links {
+	display: flex;
+	gap: 15px;
+}
+
+.social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+
+.social-links svg {
+	width: 22px;
+	height: 22px;
+	transition: all 0.3s ease;
+}
+
+.social-link-telegram {
+	background: rgba(0, 136, 204, 0.1);
+}
+
+.social-link-telegram svg {
+	fill: #0088cc;
+}
+
+.social-link-telegram:hover {
+	background: #0088cc;
+}
+
+.social-link-telegram:hover svg {
+	fill: white;
+}
+
+.social-link-whatsapp {
+	background: rgba(37, 211, 102, 0.1);
+}
+
+.social-link-whatsapp svg {
+	fill: #25D366;
+}
+
+.social-link-whatsapp:hover {
+	background: #25D366;
+}
+
+.social-link-whatsapp:hover svg {
+	fill: white;
+}
+
+.social-link-instagram {
+	background: rgba(225, 48, 108, 0.1);
+}
+
+.social-link-instagram svg {
+	fill: #E1306C;
+}
+
+.social-link-instagram:hover {
+	background: #E1306C;
+}
+
+.social-link-instagram:hover svg {
+	fill: white;
+}
+
+.footer-cta {
+	text-align: right;
+}
+
+.footer-cta h4 {
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+
+.btn-footer {
+	background: white;
 	color: var(--accent);
+	border: none;
+	font-weight: 600;
+	padding: 12px 30px;
 }
 
-.footer-about p {
-	opacity: 0.8;
-	margin-bottom: 20px;
-}
-
-.footer-links h4 {
-	font-size: 18px;
-	margin-bottom: 20px;
-	position: relative;
-	padding-bottom: 10px;
-}
-
-.footer-links h4::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 40px;
-	height: 2px;
-	background-color: var(--accent);
-}
-
-.footer-links ul {
-	list-style: none;
-}
-
-.footer-links ul li {
-	margin-bottom: 10px;
-}
-
-.footer-links ul li a {
+.btn-footer:hover {
+	background: var(--primary);
 	color: white;
-	opacity: 0.8;
-	text-decoration: none;
-	transition: opacity 0.3s;
-}
-
-.footer-links ul li a:hover {
-	opacity: 1;
 }
 
 .footer-bottom {
-	text-align: center;
-	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
-	font-size: 14px;
+	position: relative;
+	z-index: 2;
+}
+
+.footer-bottom p {
 	opacity: 0.7;
+	font-size: 14px;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.footer-links a {
+	color: white;
+	opacity: 0.7;
+	text-decoration: none;
+	font-size: 14px;
+	transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+	opacity: 1;
+}
+
+.footer-links span {
+	opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+	.footer-content {
+		flex-direction: column;
+		text-align: center;
+		gap: 30px;
+	}
+
+	.footer-cta {
+		text-align: center;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		gap: 15px;
+	}
 }
 
 /* Animations */
@@ -959,6 +1150,7 @@ footer {
 	}
 
 	.hero-shapes {
+		top: 40%;
 		right: 0;
 	}
 
@@ -1098,13 +1290,6 @@ footer {
 .faq-question.active .faq-icon {
 	transform: rotate(45deg);
 }
-
-/* .faq-answer {
-	max-height: 0;
-	overflow: hidden;
-	background-color: white;
-	transition: max-height 0.3s ease, padding 0.3s ease;
-} */
 
 .faq-answer {
 	max-height: 0;
