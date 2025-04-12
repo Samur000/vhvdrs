@@ -934,6 +934,9 @@ footer::before {
 		flex-direction: column;
 		gap: 15px;
 	}
+	.social-links{
+		justify-content: center;
+	}
 }
 
 /* Animations */
