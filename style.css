@@ -488,13 +488,23 @@ nav ul li a:hover {
 }
 
 .case-card {
-	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-	transition: transform 0.3s ease;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%; /* Занимает всю доступную высоту */
 }
 
+.case-content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1; 
+	padding: 20px;
+	background-color: white;
+}
+
+.cases-link {
+	margin-top: auto; /* Прижимает кнопку к низу */
+	padding-top: 20px;
+}
 .case-card:hover {
 	transform: translateY(-10px);
 }
@@ -649,6 +659,7 @@ nav ul li a:hover {
 
 .social-links {
 	display: flex;
+	
 	gap: 15px;
 }
 
