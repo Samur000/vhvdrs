@@ -120,10 +120,9 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-	height: 100vh;
+	height: 90vh;
 	display: flex;
 	align-items: center;
-	padding-top: 80px;
 	position: relative;
 	overflow: hidden;
 }
@@ -1125,7 +1124,7 @@ footer::before {
 
 	.hero {
 		height: auto;
-		min-height: 100vh;
+		min-height: 90vh;
 	}
 
 	.hero h1 {
